@@ -16,21 +16,21 @@ export default function TabLayout() {
         options={{
           title: 'Home',
         //   just a name of tab
-          tabBarIcon: ({ color }) => <Ionicons name="home" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <Ionicons name="home" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="collections"
         options={{
           title: 'collections',
-          tabBarIcon: ({ color }) => <Ionicons name="folder-open-sharp" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <Ionicons name="folder-open-sharp" size={24}  color={color} />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: 'profile',
-          tabBarIcon: ({ color }) => <Ionicons name="people" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <Ionicons name="people" size={24}  color={color} />,
         }}
       />
     </Tabs>
