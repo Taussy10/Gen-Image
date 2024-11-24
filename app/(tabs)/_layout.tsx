@@ -5,31 +5,32 @@
 // basic knowledege: you have to crete index.tsx only in by default layout 
 
 import { Tabs } from 'expo-router';
-import Entypo from '@expo/vector-icons/Entypo';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import Colors from '../Constants/Colors';
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue', headerShown: false}}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.PRIMARY , headerShown: false}}>
       <Tabs.Screen
         name="home"
         // name of tabs: it will be use in mapping: /home
         options={{
           title: 'Home',
         //   just a name of tab
-          tabBarIcon: ({ color }) => <Entypo name="home" size={24} color="black" /> ,
+          tabBarIcon: ({ color }) => <Ionicons name="home" size={24} color="black" />,
         }}
       />
       <Tabs.Screen
         name="collections"
         options={{
           title: 'collections',
-        //   tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="folder-open-sharp" size={24} color="black" />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: 'profile',
-        //   tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="people" size={24} color="black" />,
         }}
       />
     </Tabs>
