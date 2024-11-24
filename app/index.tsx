@@ -11,7 +11,8 @@ export default function Index() {
       }}
     >
       {/* <Text>Edit app/index.tsx to edit this screen.</Text> */}
-      <Redirect href={"/LoginScreen/login"} />
+      {/* <Redirect href={"/LoginScreen/login"} /> */}
+      <Redirect href={"/(tabs)/home"} />
     </View>
   );
 }

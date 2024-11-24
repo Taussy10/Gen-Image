@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View , Image} from 'react-native'
+import { StyleSheet, Text, View , Image, Button, TouchableOpacity} from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
+import Colors from '../Constants/Colors'
 
 const LoginScreen = () => {
   return (
@@ -14,10 +15,19 @@ const LoginScreen = () => {
 
         <View style={styles.subContainer}>
 
-         <Text>Welcome to Gen-Image</Text>
-         <Text style={{color:"grey"}}>Create AI Art in Just on Click</Text>
+         <Text style={{color: 'black' , fontWeight: 'bold' , fontSize: 27 , textAlign: 'center'}}>Welcome to Gen-Image</Text>
+         <Text style={{color: Colors.GRAY  , textAlign: 'center'}}>Create AI Art in Just one Click</Text>
 
+    <TouchableOpacity 
+    activeOpacity={0.8}
+    style={styles.button}>
+      <Text style={{color: "white" ,fontWeight: 'semibold', fontSize: 19,}}>Continue</Text>
+    </TouchableOpacity>
+
+    <Text style={{textAlign:'center' , color: Colors.GRAY}}>By continuing you agree to our T&C</Text>
         </View>
+
+ 
     </SafeAreaView>
   )
 }
@@ -31,11 +41,25 @@ const styles = StyleSheet.create({
         // backgroundColor: 'green'
     },
     subContainer:{
-      flex: 1,
-      justifyContent: 'center',
-      // alignItems:'center',
-    backgroundColor: 'lightgrey',
-
+    height: 210,
+    justifyContent:  'space-between' ,
+    backgroundColor: 'white',
+    padding: 25,
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+    // paddingBottom: 1,
+   
+    },
+    button:{
+    backgroundColor:'black',
+    padding: 10, 
+    borderRadius:30,
+    height: 50,
+    width: "100%",
+    justifyContent:'center', //justifyContent for top to bottom
+    alignItems:'center',  
+     
+    
     }
 })
 
